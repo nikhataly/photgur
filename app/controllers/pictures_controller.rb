@@ -1,12 +1,12 @@
 class PicturesController < ApplicationController
 
-#   def index
-#     @pictures = Picture.all
-#   end
+  def index
+    @pictures = Picture.all
+  end
 
-# def show
-#     @picture = Picture.find(params[:id])
-#   end
+def show
+    @picture = Picture.find(params[:id])
+  end
 
 def new
     @picture = Picture.new
@@ -22,8 +22,9 @@ def create
 end
 
 private
-  def picture_params
+
+def picture_params
     params.require(:picture).permit(:artist, :title, :url)
-  end
+end
 
 end
